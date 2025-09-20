@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mindfull_app/screens/settings_screen.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});
@@ -36,7 +37,12 @@ class IntroScreen extends StatelessWidget {
           Align(
             alignment: const Alignment(0, 0.5),
             child: ElevatedButton(
-              onPressed: () {}, 
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => SettingsScreen())
+                  );
+              }, 
               child: const Text("Start")),
           )
           ]
